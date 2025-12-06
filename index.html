@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Indian Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">RecipeBook</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Culinary Treasures of India</h1>
+            <p>Over 50 traditional nutritional recipes from across the nation.</p>
+            <a href="#recipes" class="btn">View All Recipes</a>
+        </div>
+    </header>
+
+    <section id="recipes" class="container">
+        <div class="section-title">
+            <h2>Recipe Collection</h2>
+            <div class="filter-btns">
+                <button class="filter-btn active" onclick="filterRecipes('all')">All</button>
+                <button class="filter-btn" onclick="filterRecipes('East India')">East India</button>
+                <button class="filter-btn" onclick="filterRecipes('West India')">West India</button>
+                <button class="filter-btn" onclick="filterRecipes('North India')">North India</button>
+                <button class="filter-btn" onclick="filterRecipes('South India')">South India</button>
+            </div>
+        </div>
+        
+        <div class="recipe-grid" id="recipe-container">
+            </div>
+    </section>
+
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="Recipe Image">
+                </div>
+                <div class="modal-text">
+                    <h2 id="modal-title"></h2>
+                    <p class="recipe-category" id="modal-category"></p>
+                    <p class="recipe-desc" id="modal-desc"></p>
+                    
+                    <h3>Ingredients</h3>
+                    <ul id="modal-ingredients"></ul>
+
+                    <h3>Method</h3>
+                    <p id="modal-method"></p>
+
+                    <div class="nutritional-info">
+                        <h3>Nutritional Highlights</h3>
+                        <p id="modal-nutrition"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Indian Recipe Book Project | Data Source: NCEARD</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
